@@ -1,0 +1,6 @@
+.vscode/
+/tmp
+
+.DS_Store
+
+app.env
