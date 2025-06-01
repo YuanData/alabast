@@ -10,7 +10,7 @@
 package mockdb
 
 import (
-	sqlc "alabast/db/sqlc"
+	db "alabast/db/sqlc"
 	context "context"
 	reflect "reflect"
 
@@ -42,10 +42,10 @@ func (m *MockStore) EXPECT() *MockStoreMockRecorder {
 }
 
 // CreateRecord mocks base method.
-func (m *MockStore) CreateRecord(ctx context.Context, arg sqlc.CreateRecordParams) (sqlc.Record, error) {
+func (m *MockStore) CreateRecord(ctx context.Context, arg db.CreateRecordParams) (db.Record, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRecord", ctx, arg)
-	ret0, _ := ret[0].(sqlc.Record)
+	ret0, _ := ret[0].(db.Record)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -57,10 +57,10 @@ func (mr *MockStoreMockRecorder) CreateRecord(ctx, arg any) *gomock.Call {
 }
 
 // CreateUser mocks base method.
-func (m *MockStore) CreateUser(ctx context.Context, arg sqlc.CreateUserParams) (sqlc.User, error) {
+func (m *MockStore) CreateUser(ctx context.Context, arg db.CreateUserParams) (db.User, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateUser", ctx, arg)
-	ret0, _ := ret[0].(sqlc.User)
+	ret0, _ := ret[0].(db.User)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -72,10 +72,10 @@ func (mr *MockStoreMockRecorder) CreateUser(ctx, arg any) *gomock.Call {
 }
 
 // GetRecord mocks base method.
-func (m *MockStore) GetRecord(ctx context.Context, id int64) (sqlc.Record, error) {
+func (m *MockStore) GetRecord(ctx context.Context, id int64) (db.Record, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRecord", ctx, id)
-	ret0, _ := ret[0].(sqlc.Record)
+	ret0, _ := ret[0].(db.Record)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -87,10 +87,10 @@ func (mr *MockStoreMockRecorder) GetRecord(ctx, id any) *gomock.Call {
 }
 
 // GetUser mocks base method.
-func (m *MockStore) GetUser(ctx context.Context, username string) (sqlc.User, error) {
+func (m *MockStore) GetUser(ctx context.Context, username string) (db.User, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetUser", ctx, username)
-	ret0, _ := ret[0].(sqlc.User)
+	ret0, _ := ret[0].(db.User)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -102,10 +102,10 @@ func (mr *MockStoreMockRecorder) GetUser(ctx, username any) *gomock.Call {
 }
 
 // ListRecords mocks base method.
-func (m *MockStore) ListRecords(ctx context.Context, arg sqlc.ListRecordsParams) ([]sqlc.Record, error) {
+func (m *MockStore) ListRecords(ctx context.Context, arg db.ListRecordsParams) ([]db.Record, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRecords", ctx, arg)
-	ret0, _ := ret[0].([]sqlc.Record)
+	ret0, _ := ret[0].([]db.Record)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
